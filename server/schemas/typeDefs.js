@@ -3,6 +3,7 @@ const typeDefs = gql`
   type Page {
     _id: ID
     pageTitle: String
+    pageHeading: String
     content: String
   }
 
@@ -11,7 +12,7 @@ const typeDefs = gql`
     page(pageTitle: String): Page
   }
   type Mutation {
-    addPage(pageTitle: String!, content: String!): Page
+    addPage(pageTitle: String!, pageHeading: String!, content: String!): Page
   }
 `;
 
