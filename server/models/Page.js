@@ -6,6 +6,10 @@ const pageSchema = new Schema({
     required: true,
     unique: true,
   },
+  pageHeading: {
+    type: String,
+    required: true,
+  },
   content: {
     type: String,
     required: true,
