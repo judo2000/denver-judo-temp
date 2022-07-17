@@ -13,6 +13,7 @@ const typeDefs = gql`
   }
   type Mutation {
     addPage(pageTitle: String!, pageHeading: String!, content: String!): Page
+    updatePage(pageTitle: String!, pageHeading: String!, content: String): Page
   }
 `;
 

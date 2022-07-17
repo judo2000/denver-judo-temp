@@ -16,6 +16,18 @@ const resolvers = {
       const page = await Page.create(args);
       return page;
     },
+    updatePage: async (parent, args) => {
+      console.log(args);
+      try {
+        const page = await Page.findOneAndUpdate(
+          { pageTitle: args.pageTitle },
+          { pageHeading: args.pageHeading, content: args.content }
+        );
+        return page;
+      } catch (error) {
+        return error;
+      }
+    },
   },
 };
 
