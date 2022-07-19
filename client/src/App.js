@@ -1,6 +1,6 @@
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
-import Form from './components/Form';
+import Admin from './components/admin';
 import Home from './pages/Home';
 
 // Construct our main GraphQL API endpoint
@@ -17,8 +17,8 @@ function App() {
           <Route path='/:pageTitle' element={<Home />}>
             Home
           </Route>
-          <Route path='/form' element={<Form />}>
-            Form
+          <Route path='/admin' element={<Admin />}>
+            Admin
           </Route>
         </Routes>
       </Router>

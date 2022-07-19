@@ -1,44 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import { useMutation } from '@apollo/client';
-import { UPDATE_PAGE } from '../utils/mutations';
+import { useMutation, useQuery } from '@apollo/client';
 
-const Form = () => {
-  const [pageTitle, setPageTitle] = useState('');
+import { GET_SINGLE_PAGE } from '../utils/queries';
+import Editor from './Editor';
+const Form = ({ pageTitle }) => {
+  console.log(pageTitle);
   const [pageHeading, setPageHeading] = useState('');
   const [content, setContent] = useState('');
 
-  const [updatePage, { error }] = useMutation(UPDATE_PAGE);
+  const { data, loading } = useQuery(GET_SINGLE_PAGE, {
+    variables: { pageTitle: pageTitle },
+  });
+  const pageData = data?.page || {};
+  console.log(pageData.pageHeading);
+  useEffect(() => {
+    setPageHeading(pageData.pageHeading);
+    setContent(pageData.content);
+  }, [setPageHeading, pageData, pageHeading, content]);
 
-  const submitHandler = async (e) => {
-    e.preventDefault();
-    console.log(pageTitle);
-    console.log(pageHeading);
-    console.log(content);
-    try {
-      const { data } = await updatePage({
-        variables: { pageTitle, pageHeading, content },
-      });
-
-      //setCommentText('');
-    } catch (err) {
-      console.error(err);
-    }
+  const handleChange = (html) => {
+    setContent({ editor: html });
   };
-
   return (
     <div>
-      <form onSubmit={submitHandler}>
-        <label>Page Title</label>
-        <select onChange={(e) => setPageTitle(e.target.value)}>
-          <option value='0'>Select Page to update...</option>
-          <option value='home'>Home</option>
-          <option value='instructors'>Instructors</option>
-        </select>
+      <form>
         <label>Page Heading</label>
-        <input type='text' onChange={(e) => setPageHeading(e.target.value)} />
-        <ReactQuill theme='snow' value={content} onChange={setContent} />
+        <input
+          type='text'
+          value={pageHeading}
+          onChange={(e) => setPageHeading(e.target.value)}
+        />
+        <ReactQuill theme='snow' value={content} onChange={this.handleChange} />
         <button type='submit'>Submit</button>
       </form>
     </div>
