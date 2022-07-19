@@ -5,6 +5,7 @@ import { useMutation, useQuery } from '@apollo/client';
 
 import { GET_SINGLE_PAGE } from '../utils/queries';
 import Editor from './Editor';
+
 const Form = ({ pageTitle }) => {
   console.log(pageTitle);
   const [pageHeading, setPageHeading] = useState('');
@@ -32,7 +33,13 @@ const Form = ({ pageTitle }) => {
           value={pageHeading}
           onChange={(e) => setPageHeading(e.target.value)}
         />
-        <ReactQuill theme='snow' value={content} onChange={this.handleChange} />
+        <ReactQuill
+          theme='snow'
+          value={content ? content : ''}
+          onChange={handleChange}
+        />
+        {/* <ReactQuill theme='snow' value={content} onChange={(e) => setContent(e.target.value)} /> */}
+
         <button type='submit'>Submit</button>
       </form>
     </div>
