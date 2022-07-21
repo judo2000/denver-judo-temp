@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-
-import { GET_SINGLE_PAGE } from '../utils/queries';
-import { UPDATE_PAGE } from '../utils/mutations';
 import Form from './Form';
 
 const Admin = () => {
