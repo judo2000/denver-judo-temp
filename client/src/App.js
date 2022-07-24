@@ -2,6 +2,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import Admin from './components/admin';
 import Home from './pages/Home';
+import Nav from './components/Nav';
 
 // Construct our main GraphQL API endpoint
 const client = new ApolloClient({
@@ -12,6 +13,7 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
+      <Nav />
       <Router>
         <Routes>
           <Route path='/:pageTitle' element={<Home />}>
