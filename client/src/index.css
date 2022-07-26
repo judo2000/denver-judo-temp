@@ -1,9 +1,9 @@
-.quill > .ql-toolbar:first-child {
-  display: none !important;
-}
-
 :root {
   --dj-red: #e42626;
+}
+
+.quill > .ql-toolbar:first-child {
+  display: none !important;
 }
 
 .offcanvas {
@@ -20,10 +20,50 @@
   font-family: Bebas Neue;
   font-style: Regular;
   text-transform: uppercase;
+  font-size: 72px;
 }
 
-.home-class-heading {
-  font-style: bold;
+.home-section-heading {
+  font-family: 'DM Sans';
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 34px;
+}
+
+.home-section-text {
+  font-family: 'DM Sans';
+  font-size: 24px;
+  line-height: 33.6px;
+}
+
+.home-section-text a {
+  color: var(--dj-red);
+}
+
+#try-a-class {
+  background-color: var(--dj-red);
+}
+
+#about-judo {
+  background-color: #000;
+}
+
+.home-about-img {
+  width: 321px;
+  height: 373px;
+}
+
+#idZenPlannerFrame {
+  color: var(--dj-red);
+  border: 1em solid var(--dj-red);
+}
+
+#idZenPlannerFrame a:link {
+  color: var(--dj-red);
+}
+
+#idZenPlannerFrame2 {
+  border: 1em solid #ed1c24;
 }
 
 .sidenav {
