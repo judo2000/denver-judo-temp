@@ -102,14 +102,14 @@
   background-size: contain;
   background-repeat: no-repeat;
 
-  transition: all 0.4s ease;
+  transition: all 0.4s ease-out;
 }
 
 .faqs .faq .faq-answer {
   opacity: 0;
   max-height: 0;
   overflow-y: hidden;
-  transition: all 0.4s ease;
+  transition: all 0.4s ease-out;
 }
 
 .faqs .faq.open .faq-question {
