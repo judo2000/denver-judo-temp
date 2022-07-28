@@ -66,11 +66,11 @@ const Home = () => {
             <section id='classes' className='my-4 py-4'>
               <div>
                 <Row>
-                  <Col xs={12} md={4} className='py-2'>
+                  <Col sm={12} md={6} lg={4} className='py-2'>
                     <div>
-                      <h2 className='home-section-heading'>
+                      <h3 className='home-section-heading'>
                         Judo Fundamentals
-                      </h2>
+                      </h3>
                       <span className='home-section-text'>
                         Lorem ipsum dolor sit, amet consectetur adipisicing
                         elit. Assumenda eius hic fugit provident officia
@@ -78,9 +78,9 @@ const Home = () => {
                       </span>
                     </div>
                   </Col>
-                  <Col xs={12} md={4} className='py-2'>
+                  <Col sm={12} md={6} lg={4} className='py-2'>
                     <div>
-                      <h2 className='home-section-heading'>Competition Judo</h2>
+                      <h3 className='home-section-heading'>Competition Judo</h3>
                       <span className='home-section-text'>
                         Lorem ipsum dolor sit, amet consectetur adipisicing
                         elit. Nihil, amet. Voluptatum cupiditate magnam enim
@@ -88,9 +88,9 @@ const Home = () => {
                       </span>
                     </div>
                   </Col>
-                  <Col xs={12} md={4} className='py-2'>
+                  <Col sm={12} md={6} lg={4} className='py-2'>
                     <div>
-                      <h2 className='home-section-heading'>Kids Judo</h2>
+                      <h3 className='home-section-heading'>Kids Judo</h3>
                       <span className='home-section-text'>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Minima cumque incidunt temporibus excepturi perspiciatis
@@ -114,12 +114,12 @@ const Home = () => {
             </section>
 
             <section id='about-judo'>
-              <div className='pt-5'>
+              <div className='pt-4'>
                 <Row className='mt-4 py-5 justify-content-center'>
                   <Col md={10}>
                     <Row>
-                      <Col xs={12} md={6} className='ps-5'>
-                        <div className='ms-5'>
+                      <Col sm={12} md={6} className='ps-2 py-3'>
+                        <div className='ms-4 text-center'>
                           <img
                             className='home-about-img img-fluid'
                             src='img/kano.png'
@@ -127,8 +127,8 @@ const Home = () => {
                           />
                         </div>
                       </Col>
-                      <Col xs={12} md={6} className='ps-5'>
-                        <div className='mx-4'>
+                      <Col sm={12} md={6} className='ps-2 py-3'>
+                        <div className='ms-4'>
                           <h2 className='home-section-heading text-white'>
                             Jigoro Kano
                           </h2>
@@ -141,10 +141,10 @@ const Home = () => {
                       </Col>
                     </Row>
                     <Row className='py-5 '>
-                      <Col xs={12} md={6} className='ps-5'>
-                        <div className='ms-5'>
+                      <Col sm={12} md={6} className='ps-2 py-3'>
+                        <div className='ms-4'>
                           <h2 className='home-section-heading text-white'>
-                            Jigoro Kano
+                            Our Dojo
                           </h2>
                           <span className='home-section-text text-white'>
                             Lorem ipsum dolor sit amet consectetur adipisicing
@@ -153,11 +153,11 @@ const Home = () => {
                           </span>
                         </div>
                       </Col>
-                      <Col xs={12} md={6} className='ps-5'>
-                        <div className='mx-5'>
+                      <Col sm={12} md={6} className='ps-2 py-3'>
+                        <div className='ms-4 text-center'>
                           <img
                             className='home-about-img img-fluid'
-                            src='img/kano.png'
+                            src='img/Den_Judo_Kayla_Harrison.jpg'
                             alt='Kano'
                           />
                         </div>
@@ -168,7 +168,10 @@ const Home = () => {
               </div>
             </section>
 
-            <section id='faq'>
+            <section id='faq' className='my-4 py-4'>
+              <div>
+                <h2 className='home-sub-heading'>Frequently Asked Questions</h2>
+              </div>
               <FAQ />
             </section>
           </main>
