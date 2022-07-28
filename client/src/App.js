@@ -17,24 +17,21 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <Header />
-        <main className='py-3'>
-          <Container>
-            <Routes>
-              <Route path='/' element={<Home />}>
-                Home
-              </Route>
-              <Route path='/schedule' element={<Schedule />}>
-                Schedule
-              </Route>
-              <Route path='/about' element={<About />}>
-                About
-              </Route>
-              <Route path='/admin' element={<Admin />}>
-                Admin
-              </Route>
-            </Routes>
-          </Container>
+        <main>
+          <Routes>
+            <Route path='/' element={<Home />}>
+              Home
+            </Route>
+            <Route path='/schedule' element={<Schedule />}>
+              Schedule
+            </Route>
+            <Route path='/about' element={<About />}>
+              About
+            </Route>
+            <Route path='/admin' element={<Admin />}>
+              Admin
+            </Route>
+          </Routes>
         </main>
       </Router>
     </ApolloProvider>
