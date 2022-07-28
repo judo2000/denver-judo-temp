@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -16,36 +15,36 @@ const Home = () => {
   // console.log(data);
   // const page = data?.page || {};
 
-  const [faqs, setFaqs] = useState([
-    {
-      question: 'How many programmers does it take to screw in a lightbulb?',
-      answer: "None, We don't address hardware issues.",
-      open: true,
-    },
-    {
-      question: 'Who is the founder of judo?',
-      answer: 'Jigoro Kano',
-      open: false,
-    },
-    {
-      question: 'What does the word judo mean',
-      answer: 'Judo means The Gengle Way',
-      open: false,
-    },
-  ]);
+  // const [faqs, setFaqs] = useState([
+  //   {
+  //     question: 'How many programmers does it take to screw in a lightbulb?',
+  //     answer: "None, We don't address hardware issues.",
+  //     open: true,
+  //   },
+  //   {
+  //     question: 'Who is the founder of judo?',
+  //     answer: 'Jigoro Kano',
+  //     open: false,
+  //   },
+  //   {
+  //     question: 'What does the word judo mean',
+  //     answer: 'Judo means The Gengle Way',
+  //     open: false,
+  //   },
+  // ]);
 
-  const toggleFAQ = (index) => {
-    setFaqs(
-      faqs.map((faq, i) => {
-        if (i === index) {
-          faq.open = !faq.open;
-        } else {
-          faq.open = false;
-        }
-        return faq;
-      })
-    );
-  };
+  // const toggleFAQ = (index) => {
+  //   setFaqs(
+  //     faqs.map((faq, i) => {
+  //       if (i === index) {
+  //         faq.open = !faq.open;
+  //       } else {
+  //         faq.open = false;
+  //       }
+  //       return faq;
+  //     })
+  //   );
+  // };
 
   return (
     <>
@@ -170,11 +169,7 @@ const Home = () => {
             </section>
 
             <section id='faq'>
-              <div className='faqs'>
-                {faqs.map((faq, i) => (
-                  <FAQ faq={faq} key={i} index={i} toggleFAQ={toggleFAQ} />
-                ))}
-              </div>
+              <FAQ />
             </section>
           </main>
         </Row>
