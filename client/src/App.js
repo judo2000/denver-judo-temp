@@ -1,11 +1,9 @@
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
 import Admin from './components/admin';
 import Home from './pages/Home';
 import Schedule from './pages/Schedule';
 import About from './pages/About';
-import Header from './components/Header';
 
 // Construct our main GraphQL API endpoint
 const client = new ApolloClient({

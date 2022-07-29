@@ -133,7 +133,7 @@ body {
   transform: translate(-50%);
   width: 30px;
   height: 30px;
-  background-image: url('../public/img/angle-down-solid.svg');
+  background-image: url('../public/assets/img/angle-down-solid.svg');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
